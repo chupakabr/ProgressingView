@@ -1,0 +1,22 @@
+{
+  "name": "ProgressingView",
+  "version": "0.1.0",
+  "summary": "A short description of ProgressingView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/chupakabr/ProgressingView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "chupakabr": "myltik@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/chupakabr/ProgressingView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ProgressingView/Classes/**/*"
+}

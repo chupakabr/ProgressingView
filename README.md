@@ -22,7 +22,9 @@ pod 'ProgressingView'
 
 ## Author
 
-chupakabr, myltik@gmail.com
+Alex Kremer, godexsoft@gmail.com
+Valera Chevtaev, myltik@gmail.com
+
 
 ## License
 

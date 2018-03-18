@@ -8,35 +8,28 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ProgressingView'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of ProgressingView.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.version          = '1.0'
+  s.summary          = 'Drop-in component that allows fancy progress views with gradients fully designable in right in the storyboard.'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+This is a drop-in component that implements a progress view with fancy gradients or plain old solid colors.
+It allows the user to visually pick the colors for both background and foreground
+gradients within the Storyboard. Just drop a view into your storyboard, set the
+class to ProgressingView and you are ready to play with colors.
                        DESC
-
   s.homepage         = 'https://github.com/chupakabr/ProgressingView'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'chupakabr' => 'myltik@gmail.com' }
-  s.source           = { :git => 'https://github.com/chupakabr/ProgressingView.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '8.0'
-
+  s.license          = {
+      :type => 'MIT',
+      :file => 'LICENSE'
+  }
+  s.authors          = {
+      'Alex Kremer' => 'godexsoft@gmail.com',
+      'Valera Chevtaev' => 'myltik@gmail.com'
+  }
+  s.source           = {
+      :git => 'https://github.com/chupakabr/ProgressingView.git',
+      :tag => s.version.to_s
+  }
+  s.ios.deployment_target = '10.0'
   s.source_files = 'ProgressingView/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'ProgressingView' => ['ProgressingView/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit'
 end

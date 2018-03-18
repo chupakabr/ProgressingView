@@ -1,0 +1,16 @@
+PODS:
+  - ProgressingView (0.1.0)
+
+DEPENDENCIES:
+  - ProgressingView (from `../`)
+
+EXTERNAL SOURCES:
+  ProgressingView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ProgressingView: 8a84251ecbf83aa1da57981f589555bca572156d
+
+PODFILE CHECKSUM: 6acc480187cef7c442a2c21f7b01e7f5677fb56f
+
+COCOAPODS: 1.4.0
