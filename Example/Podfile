@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ProgressingView_Example' do
+  pod 'ProgressingView', :path => '../'
+
+  target 'ProgressingView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
