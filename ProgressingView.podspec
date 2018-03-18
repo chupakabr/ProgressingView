@@ -30,6 +30,7 @@ class to ProgressingView and you are ready to play with colors.
       :tag => s.version.to_s
   }
   s.ios.deployment_target = '10.0'
+  s.swift_version = '4.0'
   s.source_files = 'ProgressingView/Classes/**/*'
   s.frameworks = 'UIKit'
 end
