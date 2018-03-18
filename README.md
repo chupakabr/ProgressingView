@@ -22,8 +22,8 @@ pod 'ProgressingView'
 
 ## Author
 
-Alex Kremer, godexsoft@gmail.com
-Valera Chevtaev, myltik@gmail.com
+- Alex Kremer, godexsoft@gmail.com
+- Valera Chevtaev, myltik@gmail.com
 
 
 ## License
