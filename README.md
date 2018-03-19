@@ -25,6 +25,11 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'ProgressingView'
 ```
+## Usage
+
+Drop a View onto your storyboard, change the class to ProgressingView and start configuring your ProgressingView.
+
+Note: Don't use the ProgressingView as a container for other views.
 
 ## Author
 
