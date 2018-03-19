@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ProgressingView'
-  s.version          = '1.0'
+  s.version          = '1.1'
   s.summary          = 'Drop-in component that allows fancy progress views with gradients fully designable in right in the storyboard.'
   s.description      = <<-DESC
 This is a drop-in component that implements a progress view with fancy gradients or plain old solid colors.
