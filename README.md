@@ -11,6 +11,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+## Example in a gif
+
+![Example gif here](https://media.giphy.com/media/2sYfjk6SOSf8N6LWlv/giphy.gif)
+
 ## Installation
 
 ProgressingView is available through [CocoaPods](http://cocoapods.org). To install
