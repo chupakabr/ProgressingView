@@ -50,13 +50,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="L9B-Hr-2DS">
-                                <rect key="frame" x="140" y="105" width="94" height="29"/>
+                                <rect key="frame" x="140.66666666666666" y="105" width="94" height="29"/>
                                 <connections>
                                     <action selector="updateProgressWithSender:" destination="vXZ-lx-hvc" eventType="valueChanged" id="fxe-jS-eOb"/>
                                 </connections>
                             </stepper>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="s1l-wQ-dwD">
-                                <rect key="frame" x="8" y="204" width="359" height="534"/>
+                                <rect key="frame" x="8" y="204" width="359" height="508"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Use the stepper above to control the current progress of the progressing overlay.
 
@@ -68,8 +68,15 @@ All the above values can be set directly in your storyboard or from code.</strin
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hga-kR-vR1">
+                                <rect key="frame" x="135" y="732" width="105" height="30"/>
+                                <state key="normal" title="More examples"/>
+                                <connections>
+                                    <segue destination="wNM-9u-emT" kind="presentation" id="iQr-ds-9FS"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdH-bW-gZ8">
-                                <rect key="frame" x="152" y="154" width="70" height="30"/>
+                                <rect key="frame" x="152.66666666666666" y="154" width="70" height="30"/>
                                 <state key="normal" title="Timer test"/>
                                 <connections>
                                     <action selector="onTimerTest:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Zgl-em-k7p"/>
@@ -79,8 +86,9 @@ All the above values can be set directly in your storyboard or from code.</strin
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="p3f-33-uSl" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="2Ve-uX-EyG"/>
+                            <constraint firstItem="8Fw-r7-1Q0" firstAttribute="bottom" secondItem="hga-kR-vR1" secondAttribute="bottom" constant="16" id="2hW-5y-7Lz"/>
+                            <constraint firstItem="hga-kR-vR1" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="5pe-ZL-ha2"/>
                             <constraint firstItem="L9B-Hr-2DS" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="7Bh-U6-Yty"/>
-                            <constraint firstItem="8Fw-r7-1Q0" firstAttribute="bottom" secondItem="s1l-wQ-dwD" secondAttribute="bottom" constant="40" id="7J6-ka-2Cb"/>
                             <constraint firstItem="DdH-bW-gZ8" firstAttribute="top" secondItem="L9B-Hr-2DS" secondAttribute="bottom" constant="20" id="BgW-Ev-tgG"/>
                             <constraint firstItem="L9B-Hr-2DS" firstAttribute="top" secondItem="3VW-QJ-1AW" secondAttribute="bottom" constant="20" id="JR3-qh-rFU"/>
                             <constraint firstItem="s1l-wQ-dwD" firstAttribute="top" secondItem="DdH-bW-gZ8" secondAttribute="bottom" constant="20" id="Jkp-fI-GCq"/>
@@ -88,6 +96,7 @@ All the above values can be set directly in your storyboard or from code.</strin
                             <constraint firstItem="p3f-33-uSl" firstAttribute="trailing" secondItem="8Fw-r7-1Q0" secondAttribute="trailing" id="Mtj-Jd-LtC"/>
                             <constraint firstItem="3VW-QJ-1AW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="PP0-KL-Yw7"/>
                             <constraint firstItem="3VW-QJ-1AW" firstAttribute="centerX" secondItem="s1l-wQ-dwD" secondAttribute="centerX" id="SjD-Bm-mQP"/>
+                            <constraint firstItem="hga-kR-vR1" firstAttribute="top" secondItem="s1l-wQ-dwD" secondAttribute="bottom" constant="20" id="Wdh-MI-9o0"/>
                             <constraint firstItem="p3f-33-uSl" firstAttribute="leading" secondItem="8Fw-r7-1Q0" secondAttribute="leading" id="cZz-Ab-Ddr"/>
                             <constraint firstItem="3VW-QJ-1AW" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="ghe-k1-a8h"/>
                             <constraint firstItem="DdH-bW-gZ8" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="tQL-Zo-Mt1"/>
@@ -103,7 +112,196 @@ All the above values can be set directly in your storyboard or from code.</strin
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
+        </scene>
+        <!--Examples View Controller-->
+        <scene sceneID="kUr-J2-Mqa">
+            <objects>
+                <viewController id="wNM-9u-emT" customClass="ExamplesViewController" customModule="ProgressingView_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y9A-y7-0oa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bpP-vm-ote">
+                                <rect key="frame" x="20" y="108" width="335" height="650"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="f88-fq-Tmi">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="315"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDc-dF-yo2" userLabel="Progress1" customClass="ProgressingView" customModule="ProgressingView">
+                                                <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="315"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="fgFromColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="fgToColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgFromColor">
+                                                        <color key="value" red="0.99156361818313599" green="0.074455954134464264" blue="0.0066970689222216606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgToColor">
+                                                        <color key="value" red="0.99156361818313599" green="0.074455954134464264" blue="0.0066970689222216606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                        <real key="value" value="0.20000000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="arc">
+                                                        <real key="value" value="100"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5q-nU-vAL" userLabel="Progress2" customClass="ProgressingView" customModule="ProgressingView">
+                                                <rect key="frame" x="177.66666666666663" y="0.0" width="157.33333333333337" height="315"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="fgFromColor">
+                                                        <color key="value" red="0.0" green="0.58146065469999997" blue="0.25178939099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="fgToColor">
+                                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgFromColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgToColor">
+                                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                        <real key="value" value="0.69999999999999996"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="arc">
+                                                        <real key="value" value="100"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lkA-5o-ICC">
+                                        <rect key="frame" x="0.0" y="335" width="335" height="315"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bp3-lH-R0J" userLabel="Progress1" customClass="ProgressingView" customModule="ProgressingView">
+                                                <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="315"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="fgFromColor">
+                                                        <color key="value" red="0.99156361818313599" green="0.074455954134464264" blue="0.0066970689222216606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="fgToColor">
+                                                        <color key="value" red="0.99156361818313599" green="0.074455954134464264" blue="0.0066970689222216606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgFromColor">
+                                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgToColor">
+                                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                        <real key="value" value="0.59999999999999998"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="arc">
+                                                        <real key="value" value="100"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.58146065469999997" blue="0.25178939099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHb-CA-mnJ" userLabel="Progress2" customClass="ProgressingView" customModule="ProgressingView">
+                                                <rect key="frame" x="177.66666666666663" y="0.0" width="157.33333333333337" height="315"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="fgFromColor">
+                                                        <color key="value" red="0.99156361818313599" green="0.074455954134464264" blue="0.0066970689222216606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="fgToColor">
+                                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgFromColor">
+                                                        <color key="value" red="0.89087104797363281" green="1" blue="0.65179246664047241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgToColor">
+                                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                        <real key="value" value="0.29999999999999999"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="arc">
+                                                        <real key="value" value="100"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Xtj-75-SAK">
+                                <rect key="frame" x="81" y="60" width="213" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i65-sk-xV9">
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="30"/>
+                                        <state key="normal" title="Run timer"/>
+                                        <connections>
+                                            <action selector="onRunTimer:" destination="wNM-9u-emT" eventType="touchUpInside" id="FmD-DY-YjC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZrQ-25-gNh">
+                                        <rect key="frame" x="82" y="0.0" width="76" height="30"/>
+                                        <state key="normal" title="Randomize"/>
+                                        <connections>
+                                            <action selector="onRandomize:" destination="wNM-9u-emT" eventType="touchUpInside" id="JUP-Pa-nfv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdX-UB-CVn">
+                                        <rect key="frame" x="174" y="0.0" width="39" height="30"/>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="onClose:" destination="wNM-9u-emT" eventType="touchUpInside" id="6Pm-nM-eiO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xtj-75-SAK" firstAttribute="centerX" secondItem="Y9A-y7-0oa" secondAttribute="centerX" id="4GH-lL-B7Z"/>
+                            <constraint firstItem="bpP-vm-ote" firstAttribute="leading" secondItem="1Qg-LF-b1X" secondAttribute="leading" constant="20" id="82Q-bf-9BG"/>
+                            <constraint firstItem="1Qg-LF-b1X" firstAttribute="bottom" secondItem="bpP-vm-ote" secondAttribute="bottom" constant="20" id="FeY-9z-vgX"/>
+                            <constraint firstItem="bpP-vm-ote" firstAttribute="top" secondItem="1Qg-LF-b1X" secondAttribute="top" constant="64" id="UQr-9A-Lww"/>
+                            <constraint firstItem="1Qg-LF-b1X" firstAttribute="trailing" secondItem="bpP-vm-ote" secondAttribute="trailing" constant="20" id="c37-FU-d8I"/>
+                            <constraint firstItem="Xtj-75-SAK" firstAttribute="top" secondItem="1Qg-LF-b1X" secondAttribute="top" constant="16" id="otC-KM-5KC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Qg-LF-b1X"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressingView1" destination="nDc-dF-yo2" id="iYi-L6-B3E"/>
+                        <outlet property="progressingView2" destination="Z5q-nU-vAL" id="m7h-SR-7dl"/>
+                        <outlet property="progressingView3" destination="bp3-lH-R0J" id="PaA-ur-6Oo"/>
+                        <outlet property="progressingView4" destination="zHb-CA-mnJ" id="PfB-Tk-frf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Scw-ro-2qr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888.79999999999995" y="131.52709359605913"/>
         </scene>
     </scenes>
 </document>

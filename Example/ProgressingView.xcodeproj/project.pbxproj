@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2426EF612060692400BAA233 /* ExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2426EF602060692400BAA233 /* ExamplesViewController.swift */; };
+		2426EF632060722400BAA233 /* ProgressTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2426EF622060722400BAA233 /* ProgressTimer.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		05FA32E35757A954E08394A1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2426EF602060692400BAA233 /* ExamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesViewController.swift; sourceTree = "<group>"; };
+		2426EF622060722400BAA233 /* ProgressTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTimer.swift; sourceTree = "<group>"; };
 		536C79898D26B7B34D1FEED1 /* Pods-ProgressingView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressingView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressingView_Example/Pods-ProgressingView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5E1EC388C474E6DCB2488CDB /* Pods-ProgressingView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressingView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressingView_Tests/Pods-ProgressingView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ProgressingView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgressingView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +112,8 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				2426EF602060692400BAA233 /* ExamplesViewController.swift */,
+				2426EF622060722400BAA233 /* ProgressTimer.swift */,
 			);
 			name = "Example for ProgressingView";
 			path = ProgressingView;
@@ -370,7 +376,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2426EF632060722400BAA233 /* ProgressTimer.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				2426EF612060692400BAA233 /* ExamplesViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -81,6 +81,27 @@ public class ProgressingView: UIControl {
         }
     }
 
+    @IBInspectable
+    public var borderWidth: CGFloat = 0 {
+        didSet {
+            self.layer.borderWidth = borderWidth
+        }
+    }
+    
+    @IBInspectable
+    public var borderColor: UIColor = UIColor.clear {
+        didSet {
+            self.layer.borderColor = borderColor.cgColor
+        }
+    }
+    
+    @IBInspectable
+    public var cornerRadius: CGFloat = 0 {
+        didSet {
+            self.layer.cornerRadius = cornerRadius
+        }
+    }
+    
     // MARK: - Overrides
 
     public override func layoutSubviews() {
@@ -92,6 +113,11 @@ public class ProgressingView: UIControl {
     }
 
     public override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = cornerRadius
+        
         CATransaction.begin()
         CATransaction.setDisableActions(true)
         
@@ -114,6 +140,10 @@ public class ProgressingView: UIControl {
         var path: CGPath!
         
         if arc != 0.0 {
+            if arc >= bounds.height {
+                arc = bounds.height/2
+            }
+            
             var b = bounds
             b.size.width *= 2
             b.size.height *= 2
@@ -125,7 +155,7 @@ public class ProgressingView: UIControl {
         }
         
         maskLayer.path = path
-        maskLayer.frame = frame
+        maskLayer.frame = bounds
         
         fgGradientLayer?.mask = maskLayer
         self.maskLayer = maskLayer
