@@ -27,7 +27,13 @@ class ViewController: UIViewController {
 
     @IBOutlet var progressingOverlay: ProgressingView!
     @IBOutlet var stepper: UIStepper!
-
+    
+    private var timer: Timer? = nil
+    private var timerRunning = false
+    
+    private var timePassed = 0.0
+    private var startTime = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,9 +41,49 @@ class ViewController: UIViewController {
     }
 
     @IBAction func updateProgress(sender: UIStepper) {
+        stopTimer()
+        
         self.progressingOverlay.progress = self.currentProgress
     }
 
+    @IBAction func onTimerTest(_ sender: Any) {
+        stopTimer()
+        restartTimer()
+    }
+    private func stopTimer() {
+        if timerRunning {
+            timerRunning = false
+        }
+        
+        if let timer = timer {
+            timer.invalidate()
+        }
+    }
+    
+    private func restartTimer() {
+        progressingOverlay.progress = 0.0
+        startTime = Date().timeIntervalSinceReferenceDate
+        timePassed = 0
+        
+        if let timer = timer {
+            timer.invalidate()
+        }
+        
+        timerRunning = true
+        timer = Timer.scheduledTimer(withTimeInterval: 1/60, repeats: true) { t in
+            if self.timerRunning {
+                self.timePassed = Date().timeIntervalSinceReferenceDate - self.startTime
+                let progress = 1.0 - CGFloat(10.0-self.timePassed)/CGFloat(10.0)
+                self.progressingOverlay.progress = progress
+                
+                if progress >= 1.0 {
+                    self.timer?.invalidate()
+                    self.timer = nil
+                }
+            }
+        }
+    }
+    
     private var currentProgress: CGFloat {
         return CGFloat(self.stepper.value / self.stepper.maximumValue)
     }

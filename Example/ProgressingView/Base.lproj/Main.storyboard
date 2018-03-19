@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,64 +16,82 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ProgressingView_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3f-33-uSl" customClass="ProgressingView" customModule="ProgressingView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fgFromColor">
-                                        <color key="value" red="0.99903076887130737" green="0.87921422719955444" blue="0.80296558141708374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="1" green="0.47411475136638892" blue="0.18163018207165027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fgToColor">
-                                        <color key="value" red="0.99903076887130737" green="0.71511645617700559" blue="0.65078524866313558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.99903076887130737" green="0.71511645617700559" blue="0.29417385410531233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
                                         <real key="value" value="0.40000000000000002"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="bgFromColor">
-                                        <color key="value" red="0.82438160324197962" green="0.91783897182152052" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.96479401820796606" green="0.91783897182152052" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="bgToColor">
-                                        <color key="value" red="0.73415379757203869" green="0.83586294973573971" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.73415379757203869" green="0.90181745653846079" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="arc">
+                                        <real key="value" value="120"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProgressingView example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VW-QJ-1AW">
-                                <rect key="frame" x="16" y="40" width="343" height="21"/>
+                                <rect key="frame" x="16" y="64" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="L9B-Hr-2DS">
-                                <rect key="frame" x="140" y="77" width="94" height="29"/>
+                                <rect key="frame" x="140" y="105" width="94" height="29"/>
                                 <connections>
                                     <action selector="updateProgressWithSender:" destination="vXZ-lx-hvc" eventType="valueChanged" id="fxe-jS-eOb"/>
                                 </connections>
                             </stepper>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="s1l-wQ-dwD">
-                                <rect key="frame" x="8" y="122" width="359" height="505"/>
+                                <rect key="frame" x="8" y="204" width="359" height="534"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <string key="text">Use the stepper above to control the current progress of the progressing overlay.
+
+You can set the arc to any value above zero to change the arc of the progress bar. Try some values around 100.
+
+Colors are also adjustable. If you don't want a gradient just set both from and to colors to the same values.
+
+All the above values can be set directly in your storyboard or from code.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdH-bW-gZ8">
+                                <rect key="frame" x="152" y="154" width="70" height="30"/>
+                                <state key="normal" title="Timer test"/>
+                                <connections>
+                                    <action selector="onTimerTest:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Zgl-em-k7p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="p3f-33-uSl" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="2Ve-uX-EyG"/>
                             <constraint firstItem="L9B-Hr-2DS" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="7Bh-U6-Yty"/>
                             <constraint firstItem="8Fw-r7-1Q0" firstAttribute="bottom" secondItem="s1l-wQ-dwD" secondAttribute="bottom" constant="40" id="7J6-ka-2Cb"/>
-                            <constraint firstItem="L9B-Hr-2DS" firstAttribute="top" secondItem="3VW-QJ-1AW" secondAttribute="bottom" constant="16" id="JR3-qh-rFU"/>
+                            <constraint firstItem="DdH-bW-gZ8" firstAttribute="top" secondItem="L9B-Hr-2DS" secondAttribute="bottom" constant="20" id="BgW-Ev-tgG"/>
+                            <constraint firstItem="L9B-Hr-2DS" firstAttribute="top" secondItem="3VW-QJ-1AW" secondAttribute="bottom" constant="20" id="JR3-qh-rFU"/>
+                            <constraint firstItem="s1l-wQ-dwD" firstAttribute="top" secondItem="DdH-bW-gZ8" secondAttribute="bottom" constant="20" id="Jkp-fI-GCq"/>
                             <constraint firstItem="3VW-QJ-1AW" firstAttribute="top" secondItem="8Fw-r7-1Q0" secondAttribute="top" constant="20" id="K7t-RL-3qM"/>
                             <constraint firstItem="p3f-33-uSl" firstAttribute="trailing" secondItem="8Fw-r7-1Q0" secondAttribute="trailing" id="Mtj-Jd-LtC"/>
                             <constraint firstItem="3VW-QJ-1AW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="PP0-KL-Yw7"/>
                             <constraint firstItem="3VW-QJ-1AW" firstAttribute="centerX" secondItem="s1l-wQ-dwD" secondAttribute="centerX" id="SjD-Bm-mQP"/>
                             <constraint firstItem="p3f-33-uSl" firstAttribute="leading" secondItem="8Fw-r7-1Q0" secondAttribute="leading" id="cZz-Ab-Ddr"/>
                             <constraint firstItem="3VW-QJ-1AW" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="ghe-k1-a8h"/>
-                            <constraint firstItem="s1l-wQ-dwD" firstAttribute="top" secondItem="L9B-Hr-2DS" secondAttribute="bottom" constant="16" id="hCd-CW-FVj"/>
-                            <constraint firstItem="p3f-33-uSl" firstAttribute="bottom" secondItem="8Fw-r7-1Q0" secondAttribute="bottom" id="uIq-fd-K3I"/>
+                            <constraint firstItem="DdH-bW-gZ8" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="tQL-Zo-Mt1"/>
+                            <constraint firstItem="p3f-33-uSl" firstAttribute="bottom" secondItem="kh9-bI-dsS" secondAttribute="bottom" id="uIq-fd-K3I"/>
                             <constraint firstItem="s1l-wQ-dwD" firstAttribute="leading" secondItem="8Fw-r7-1Q0" secondAttribute="leading" constant="8" id="xfX-J4-kem"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Fw-r7-1Q0"/>

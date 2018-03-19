@@ -27,7 +27,8 @@ public class ProgressingView: UIControl {
 
     private var fgGradientLayer: CAGradientLayer? = nil
     private var bgGradientLayer: CAGradientLayer? = nil
-
+    private var maskLayer: CAShapeLayer? = nil
+    
     // MARK: - Inspectables
 
     @IBInspectable
@@ -59,6 +60,15 @@ public class ProgressingView: UIControl {
     }
     
     @IBInspectable
+    public var arc: CGFloat = 0.0 {
+        didSet {
+            if arc < 0.0 {
+                arc = 0.0
+            } 
+        }
+    }
+    
+    @IBInspectable
     public var progress: CGFloat = 0.5 {
         didSet {
             if progress > 1.0 {
@@ -82,19 +92,44 @@ public class ProgressingView: UIControl {
     }
 
     public override func draw(_ rect: CGRect) {
-        let maskLayer = CAShapeLayer()
-        let yStart = bounds.height
-        let yEnd = bounds.height * progress
-
-        let maskRect = CGRect(x: 0, y: yStart-yEnd, width: frame.width, height: yEnd)
-
-        let path = CGPath(rect: maskRect, transform: nil)
-        maskLayer.path = path
-
-        fgGradientLayer?.mask = maskLayer
+        CATransaction.begin()
+        CATransaction.setDisableActions(true)
+        
+        if let maskLayer = maskLayer {
+            if arc != 0.0 && progress >= 1.0 {
+                maskLayer.frame.origin.y = -arc
+            } else {
+                maskLayer.frame.origin.y = bounds.height * (1.0-progress)
+            }
+        }
+        
+        CATransaction.commit()
     }
 
     // MARK: - Private
+    
+    private func createMask() {
+        let maskLayer = CAShapeLayer()
+        
+        var path: CGPath!
+        
+        if arc != 0.0 {
+            var b = bounds
+            b.size.width *= 2
+            b.size.height *= 2
+            b.origin.x -= b.size.width/4
+            
+            path = CGPath(roundedRect: b, cornerWidth: b.width/2, cornerHeight: arc, transform: nil)
+        } else {
+            path = CGPath(rect: bounds, transform: nil)
+        }
+        
+        maskLayer.path = path
+        maskLayer.frame = frame
+        
+        fgGradientLayer?.mask = maskLayer
+        self.maskLayer = maskLayer
+    }
     
     private func createBgGradient() {
         guard bgToColor != nil, bgFromColor != nil else {
@@ -125,6 +160,8 @@ public class ProgressingView: UIControl {
         fg.colors = [fgFromColor.cgColor, fgToColor.cgColor]
         
         fgGradientLayer = fg
+        createMask()
+        
         layer.addSublayer(fg)
     }
 }
