@@ -77,6 +77,7 @@ public class ProgressingView: UIControl {
                 progress = 0.0
             }
             
+            sendActions(for: .valueChanged)
             setNeedsDisplay()
         }
     }
