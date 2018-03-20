@@ -193,6 +193,6 @@ public class ProgressingView: UIControl {
         fgGradientLayer = fg
         createMask()
         
-        layer.addSublayer(fg)
+        layer.insertSublayer(fg, at: 1) // fg but still bg compared to anything else
     }
 }

@@ -32,7 +32,7 @@ Alternatively you can embed the library straight into your project by copying th
 
 Drop a View onto your storyboard, change the class to ProgressingView and start configuring your ProgressingView.
 
-Note: Don't use the ProgressingView as a container for other views.
+Note: You can safely use the ProgressingView as a container for other views. It also means that if you want to change your current root View with a full screen background progressing view then it's possible by changing the class to ProgressingView as usual.
 
 ## Author
 
