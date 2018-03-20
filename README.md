@@ -15,7 +15,7 @@ iOS 10 and later
 
 ## Example in a gif
 
-![Example gif here](https://media.giphy.com/media/2sYfjk6SOSf8N6LWlv/giphy.gif)
+![Example gif here](https://media.giphy.com/media/5BPTxOQ5aA17UXJbDe/giphy.gif)
 
 ## Installation
 
