@@ -25,6 +25,9 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'ProgressingView'
 ```
+
+Alternatively you can embed the library straight into your project by copying the ProgressingView.swift file.
+
 ## Usage
 
 Drop a View onto your storyboard, change the class to ProgressingView and start configuring your ProgressingView.
