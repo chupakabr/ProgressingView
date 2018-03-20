@@ -106,7 +106,8 @@ public class ProgressingView: UIControl {
 
     public override func layoutSubviews() {
         super.layoutSubviews()
-
+        self.layer.masksToBounds = true
+        
         createBgGradient()
         createFgGradient()
         setNeedsDisplay()
@@ -115,7 +116,6 @@ public class ProgressingView: UIControl {
     public override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        self.layer.masksToBounds = true
         self.layer.cornerRadius = cornerRadius
         
         CATransaction.begin()
